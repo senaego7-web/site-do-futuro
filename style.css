@@ -1,0 +1,176 @@
+/* RESET E ESTILOS GLOBAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #111119, #221c35);
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CABEÇALHO */
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-animado {
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff5722, #ff9800, #ffeb3b);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradiente 4s ease infinite;
+}
+
+.subtitulo {
+    color: #b0b0d0;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+@keyframes gradiente {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* CONTAINER DO PRODUTO */
+.container-produto {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* GALERIA DE FOTOS */
+.galeria {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-destaque {
+    background-color: #ffffff; /* Fundo branco limpo dentro do card para a foto sobressair */
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-destaque img {
+    max-width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.foto-destaque img:hover {
+    transform: scale(1.05);
+}
+
+.miniaturas {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.miniaturas img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    object-fit: cover;
+    background: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.miniaturas img:hover {
+    border-color: #ff5722;
+}
+
+/* INFORMAÇÕES DO PRODUTO */
+.info-produto {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+
+.tag-categoria {
+    background-color: #ff5722;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.info-produto h2 {
+    font-size: 26px;
+    margin: 12px 0;
+    color: #ffffff;
+}
+
+.descricao {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.beneficios {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.beneficios li {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+}
+
+/* BOTÃO DE AÇÃO */
+.btn-destaque {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    background: linear-gradient(90deg, #ff5722, #e64a19);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-destaque:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.6);
+}
